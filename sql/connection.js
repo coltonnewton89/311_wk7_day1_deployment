@@ -6,7 +6,6 @@ class Connection {
       console.log('creating mysql connection...')
 
       const config = {
-        connectionLimit: 100,
         host: 'localhost',
         user: 'root',
         password: 'password',

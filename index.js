@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const usersRouter = require('./routers/users');
 const authRouter = require('./routers/auth');
-const { logger } = require('./middleware');
+const { logger } = require('./middleware')
 
 const app = express();
 const port = process.env.PORT || 4001;
@@ -13,7 +13,7 @@ app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join('./home.html'))
+  res.send('Welcome to our UPDATED server!')
 })
 
 app.listen(port, () => {
